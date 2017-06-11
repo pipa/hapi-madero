@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/pipa/hapi-madero.svg?branch=master)](https://travis-ci.org/pipa/hapi-madero)
 [![Dependencies Status](https://david-dm.org/pipa/hapi-madero.svg)](https://david-dm.org/pipa/hapi-madero)
+
 [![NPM](https://nodei.co/npm/hapi-madero.png)](https://nodei.co/npm/hapi-madero/)
 
 A HapiJS plugin for writing logs to files
@@ -64,7 +65,7 @@ server.register({ register: Madero, options: { path: './logs' } }, err => {
 ## Plugin Options
 
 #### `path` - String - (required)
-The path where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'.
+Madero needs to know where to save the files, this will tell madero where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'.
 
 #### `stopTimeoutMsec` - Number
 Overrides the timeout in millisecond before forcefully terminating a connection. Defaults to `15000` (15 seconds)
