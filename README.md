@@ -63,19 +63,19 @@ server.register({ register: Madero, options: { path: './logs' } }, err => {
 
 ## Plugin Options
 
-### `path` - String - (required)
+#### `path` - String - (required)
 The path where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'.
 
-### `stopTimeoutMsec` - Number
+#### `stopTimeoutMsec` - Number
 Overrides the timeout in millisecond before forcefully terminating a connection. Defaults to `15000` (15 seconds)
 
-### `silent` - Boolean
+#### `silent` - Boolean
 If you do not want to see every log in the console. Defaults to `false`
 
-### `signals` - Boolean
+#### `signals` - Boolean
 Whether you want madero to handle `SIGTERM` or `SIGINT`. Defaults to `true`
 
-### `exceptions` - Boolean
+#### `exceptions` - Boolean
 Whether you want madero to handle `uncaughtException` or `unhandledRejection`. Defaults to `true`
 
 ## License
