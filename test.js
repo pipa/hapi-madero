@@ -3,10 +3,33 @@ const Madero = require('./');
 
 const server = new Hapi.Server({ debug: false });
 
-console.log(Madero);
+server.connection({
+    host: 'localhost',
+    port: 1112
+});
+server.register({ register: Madero, options: { path: './logs' } }, err => {
 
-server.connection();
-server.register({ register: Madero, options: { } }, err => {
+    if (err) {
+        throw err;
+    }
 
-    console.log(err);
+    server.route({
+        method: 'GET',
+        path: '/log-test',
+        handler: (request, reply) => {
+
+            request.log(['test'], { message: 'test', foo: 'bar' });
+
+            return reply('ok');
+        }
+    });
+
+    server.start(err => {
+
+        if (err) {
+            throw err;
+        }
+
+        console.log(server.info);
+    });
 });

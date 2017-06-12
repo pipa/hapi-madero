@@ -31,15 +31,15 @@
     "hoek": "4.1.1",
     "joi": "10.5.2",
     "prettyjson": "1.2.1",
-    "scooter": "4.0.0",
+    "useragent": "2.1.13",
     "wavy": "1.0.4"
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",
     "code": "4.1.0",
-    "lab": "13.1.0",
+    "eslint": "3.19.0",
     "hapi": "16.4.3",
-    "eslint": "3.19.0"
+    "lab": "13.1.0"
   },
   "license": "MIT"
 }

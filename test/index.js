@@ -44,18 +44,6 @@ describe('Madero', () => {
         server.register({ register: Madero, options: internals.options }, (err) => {
 
             expect(err).to.not.exist();
-
-            server.route({
-                method: 'GET',
-                path: '/log-test',
-                handler: (request, reply) => {
-
-                    request.log(['test'], { message: 'test', foo: 'bar' });
-
-                    return reply('ok');
-                }
-            });
-
             server.start(err => {
 
                 expect(err).to.not.exist();
@@ -75,7 +63,48 @@ describe('Madero', () => {
         });
     });
     // it('logs request error event');
-    // it('logs request event');
+    it('logs request event', done => {
+
+        const server = new Hapi.Server({ debug: false });
+
+        server.connection();
+        server.register({ register: Madero, options: internals.options }, (err) => {
+
+            expect(err).to.not.exist();
+            server.route({
+                method: 'GET',
+                path: '/log-test',
+                handler: (request, reply) => {
+
+                    request.log(['test'], { message: 'test', foo: 'bar' });
+
+                    return reply('ok');
+                }
+            });
+            server.start(err => {
+
+                const options = {
+                    method: 'GET',
+                    url: '/log-test'
+                };
+
+                expect(err).to.not.exist();
+
+                server.inject(options, () => {
+
+                    setTimeout(() => {
+
+                        fsExtra.pathExists(`${internals.path}/logs/request.log`, (err, exists) => {
+
+                            expect(err).to.not.exist();
+                            expect(exists).to.equal(true);
+                            done();
+                        });
+                    }, 200);
+                });
+            });
+        });
+    });
     // it('logs error event');
     // it('logs signal (SIGTERM)');
     // it('logs signal (SIGINT)');

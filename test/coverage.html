@@ -536,7 +536,7 @@
         <li><a href="#tests">Test Report</a></li>
         <li><a href="#coverage">Coverage Report</a></li>
         <li class="">
-            <span class="cov medium">65.22</span>
+            <span class="cov medium">69.23</span>
             <a href="#lib/index.js"><span class="dirname">lib/</span><span class="basename">index.js</span></a>
         </li>
         <li><a href="#linting">Linting Report</a></li>
@@ -546,8 +546,8 @@
       <div class="stats high">
           <div class="failures">0</div>
           <div class="skipped">0</div>
-          <div class="test-count">2</div>
-          <div class="duration">274</div>
+          <div class="test-count">3</div>
+          <div class="duration">519</div>
       </div>
       <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="success" id="show-success">
@@ -579,7 +579,14 @@
               <td class="test-title">Madero logs event
                   
               </td>
-              <td class="test-duration">231</td>
+              <td class="test-duration">227</td>
+          </tr>
+          <tr class="show Madero success">
+              <td class="test-id">3</td>
+              <td class="test-title">Madero logs request event
+                  
+              </td>
+              <td class="test-duration">255</td>
           </tr>
           </tbody>
       </table>
@@ -587,10 +594,10 @@
     </div>    <div id="coverage">
         <h1>Code Coverage Report</h1>
         <div class="stats medium">
-            <div class="percentage">65.22%</div>
-            <div class="sloc">253</div>
-            <div class="hits">165</div>
-            <div class="misses">88</div>
+            <div class="percentage">69.23%</div>
+            <div class="sloc">247</div>
+            <div class="hits">171</div>
+            <div class="misses">76</div>
         </div>
         <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="generated" id="show-generated">
@@ -600,10 +607,10 @@
             <div class="file ">
                 <h2 id="lib/index.js">lib/index.js </h2>
                 <div class="stats medium">
-                    <div class="percentage">65.22%</div>
-                    <div class="sloc">253</div>
-                    <div class="hits">165</div>
-                    <div class="misses">88</div>
+                    <div class="percentage">69.23%</div>
+                    <div class="sloc">247</div>
+                    <div class="hits">171</div>
+                    <div class="misses">76</div>
                 </div>
                 <table>
                     <thead>
@@ -626,37 +633,37 @@
                           <td class="line" data-tooltip>2</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
-                          <td class="source">const Scooter &#x3D; require(&#x27;scooter&#x27;);</td>
+                          <td class="source">const Joi &#x3D; require(&#x27;joi&#x27;);</td>
                           
                         </tr>            <tr id="lib/index.js__3" class="hit">
                           <td class="line" data-tooltip>3</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
-                          <td class="source">const Joi &#x3D; require(&#x27;joi&#x27;);</td>
+                          <td class="source">const Hoek &#x3D; require(&#x27;hoek&#x27;);</td>
                           
                         </tr>            <tr id="lib/index.js__4" class="hit">
                           <td class="line" data-tooltip>4</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
-                          <td class="source">const Hoek &#x3D; require(&#x27;hoek&#x27;);</td>
+                          <td class="source">const Fs &#x3D; require(&#x27;fs-extra&#x27;);</td>
                           
                         </tr>            <tr id="lib/index.js__5" class="hit">
                           <td class="line" data-tooltip>5</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
-                          <td class="source">const Fs &#x3D; require(&#x27;fs-extra&#x27;);</td>
+                          <td class="source">const Os &#x3D; require(&#x27;os&#x27;);</td>
                           
                         </tr>            <tr id="lib/index.js__6" class="hit">
                           <td class="line" data-tooltip>6</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
-                          <td class="source">const Os &#x3D; require(&#x27;os&#x27;);</td>
+                          <td class="source">const Chalk &#x3D; require(&#x27;chalk&#x27;);</td>
                           
                         </tr>            <tr id="lib/index.js__7" class="hit">
                           <td class="line" data-tooltip>7</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
-                          <td class="source">const Chalk &#x3D; require(&#x27;chalk&#x27;);</td>
+                          <td class="source">const Useragent &#x3D; require(&#x27;useragent&#x27;);</td>
                           
                         </tr>            <tr id="lib/index.js__8" class="hit">
                           <td class="line" data-tooltip>8</td>
@@ -877,7 +884,7 @@
                         </tr>            <tr id="lib/index.js__44" class="hit">
                           <td class="line" data-tooltip>44</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const result &#x3D; Joi.validate(options, internals.schemas.write, { allowUnknown: true }); // Validate and merge options</td>
                           
                         </tr>            <tr id="lib/index.js__45" class="hit">
@@ -931,37 +938,37 @@
                         </tr>            <tr id="lib/index.js__53" class="hit">
                           <td class="line" data-tooltip>53</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const { path, silent } &#x3D; internals.settings;</td>
                           
                         </tr>            <tr id="lib/index.js__54" class="hit">
                           <td class="line" data-tooltip>54</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const { entry, request, async } &#x3D; result.value;</td>
                           
                         </tr>            <tr id="lib/index.js__55" class="hit">
                           <td class="line" data-tooltip>55</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const now &#x3D; Date.now();</td>
                           
                         </tr>            <tr id="lib/index.js__56" class="hit">
                           <td class="line" data-tooltip>56</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const type &#x3D; entry.tags.shift();</td>
                           
                         </tr>            <tr id="lib/index.js__57" class="hit">
                           <td class="line" data-tooltip>57</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const filePath &#x3D; &#x60;${ path }/${ type }.log&#x60;;</td>
                           
                         </tr>            <tr id="lib/index.js__58" class="hit">
                           <td class="line" data-tooltip>58</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const log &#x3D; {</td>
                           
                         </tr>            <tr id="lib/index.js__59" class="hit">
@@ -1021,7 +1028,7 @@
                         </tr>            <tr id="lib/index.js__68" class="hit">
                           <td class="line" data-tooltip>68</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">        log.data &#x3D; entry.data;</td>
                           
                         </tr>            <tr id="lib/index.js__69" class="hit">
@@ -1042,11 +1049,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">    //&#x3D;&#x3D; Has request?</td>
                           
-                        </tr>            <tr id="lib/index.js__72" class="chunks">
+                        </tr>            <tr id="lib/index.js__72" class="hit">
                           <td class="line" data-tooltip>72</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"><div>    if (</div><div class="miss false" data-tooltip>request</div><div>) {</div></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    if (request) {</td>
                           
                         </tr>            <tr id="lib/index.js__73" class="hit">
                           <td class="line" data-tooltip>73</td>
@@ -1054,23 +1061,23 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // Create data from request</td>
                           
-                        </tr>            <tr id="lib/index.js__74" class="miss">
+                        </tr>            <tr id="lib/index.js__74" class="hit">
                           <td class="line" data-tooltip>74</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        const scoot &#x3D; request.plugins.scooter.toJSON();</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        const scoot &#x3D; Useragent.lookup(request.headers[&#x27;user-agent&#x27;]);</td>
                           
-                        </tr>            <tr id="lib/index.js__75" class="miss">
+                        </tr>            <tr id="lib/index.js__75" class="hit">
                           <td class="line" data-tooltip>75</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        const { method, info, route } &#x3D; request;</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        const { method, info, route } &#x3D; request;</td>
                           
-                        </tr>            <tr id="lib/index.js__76" class="miss">
+                        </tr>            <tr id="lib/index.js__76" class="hit">
                           <td class="line" data-tooltip>76</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        const req &#x3D; {</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        const req &#x3D; {</td>
                           
                         </tr>            <tr id="lib/index.js__77" class="hit">
                           <td class="line" data-tooltip>77</td>
@@ -1156,11 +1163,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // Add auth data</td>
                           
-                        </tr>            <tr id="lib/index.js__91" class="miss">
+                        </tr>            <tr id="lib/index.js__91" class="chunks">
                           <td class="line" data-tooltip>91</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        if (request.auth.credentials) {</td>
+                          <td class="source"><div>        if (</div><div class="miss false" data-tooltip>request.auth.credentials</div><div>) {</div></td>
                           
                         </tr>            <tr id="lib/index.js__92" class="miss">
                           <td class="line" data-tooltip>92</td>
@@ -1204,11 +1211,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // Add request vars to log object</td>
                           
-                        </tr>            <tr id="lib/index.js__99" class="miss">
+                        </tr>            <tr id="lib/index.js__99" class="hit">
                           <td class="line" data-tooltip>99</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        Object.assign(log, { request: req });</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        Object.assign(log, { request: req });</td>
                           
                         </tr>            <tr id="lib/index.js__100" class="hit">
                           <td class="line" data-tooltip>100</td>
@@ -1309,7 +1316,7 @@
                         </tr>            <tr id="lib/index.js__116" class="hit">
                           <td class="line" data-tooltip>116</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    Fs.outputJson(filePath, log, { flag: &#x27;a&#x27; });</td>
                           
                         </tr>            <tr id="lib/index.js__117" class="hit">
@@ -1381,7 +1388,7 @@
                         </tr>            <tr id="lib/index.js__128" class="hit">
                           <td class="line" data-tooltip>128</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    return done();</td>
                           
                         </tr>            <tr id="lib/index.js__129" class="hit">
@@ -1615,7 +1622,7 @@
                         </tr>            <tr id="lib/index.js__167" class="hit">
                           <td class="line" data-tooltip>167</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">        return event;</td>
                           
                         </tr>            <tr id="lib/index.js__168" class="hit">
@@ -1855,13 +1862,13 @@
                         </tr>            <tr id="lib/index.js__207" class="hit">
                           <td class="line" data-tooltip>207</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    process.once(&#x27;SIGTERM&#x27;, shutdown(&#x27;SIGTERM&#x27;));</td>
                           
                         </tr>            <tr id="lib/index.js__208" class="hit">
                           <td class="line" data-tooltip>208</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    process.once(&#x27;SIGINT&#x27;, shutdown(&#x27;SIGINT&#x27;));</td>
                           
                         </tr>            <tr id="lib/index.js__209" class="hit">
@@ -1957,7 +1964,7 @@
                         </tr>            <tr id="lib/index.js__224" class="hit">
                           <td class="line" data-tooltip>224</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    process.once(&#x27;uncaughtException&#x27;, err &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__225" class="hit">
@@ -2011,7 +2018,7 @@
                         </tr>            <tr id="lib/index.js__233" class="hit">
                           <td class="line" data-tooltip>233</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    process.on(&#x27;unhandledRejection&#x27;, err &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__234" class="hit">
@@ -2101,7 +2108,7 @@
                         </tr>            <tr id="lib/index.js__248" class="hit">
                           <td class="line" data-tooltip>248</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    const formatEvent &#x3D; evt &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__249" class="hit">
@@ -2137,13 +2144,13 @@
                         </tr>            <tr id="lib/index.js__254" class="hit">
                           <td class="line" data-tooltip>254</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">            result.message &#x3D; evt.data.message;</td>
                           
                         </tr>            <tr id="lib/index.js__255" class="hit">
                           <td class="line" data-tooltip>255</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">            delete evt.data.message;</td>
                           
                         </tr>            <tr id="lib/index.js__256" class="hit">
@@ -2161,7 +2168,7 @@
                         </tr>            <tr id="lib/index.js__258" class="hit">
                           <td class="line" data-tooltip>258</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">        return result;</td>
                           
                         </tr>            <tr id="lib/index.js__259" class="hit">
@@ -2185,7 +2192,7 @@
                         </tr>            <tr id="lib/index.js__262" class="hit">
                           <td class="line" data-tooltip>262</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    server.ext(&#x27;onPostStop&#x27;, (srv, nextEvt) &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__263" class="hit">
@@ -2281,7 +2288,7 @@
                         </tr>            <tr id="lib/index.js__278" class="hit">
                           <td class="line" data-tooltip>278</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    server.on(&#x27;log&#x27;, (event) &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__279" class="hit">
@@ -2317,7 +2324,7 @@
                         </tr>            <tr id="lib/index.js__284" class="hit">
                           <td class="line" data-tooltip>284</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    server.on(&#x27;request&#x27;, (request, event) &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__285" class="hit">
@@ -2326,23 +2333,23 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source"></td>
                           
-                        </tr>            <tr id="lib/index.js__286" class="chunks">
+                        </tr>            <tr id="lib/index.js__286" class="hit">
                           <td class="line" data-tooltip>286</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source"><div>        </div><div class="miss never" data-tooltip>const code &#x3D; request.raw.res.statusCode;</div></td>
+                          <td class="source">        const code &#x3D; request.raw.res.statusCode;</td>
                           
-                        </tr>            <tr id="lib/index.js__287" class="miss">
+                        </tr>            <tr id="lib/index.js__287" class="hit">
                           <td class="line" data-tooltip>287</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        const state &#x3D; Object.keys(request.state)[0];</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        const state &#x3D; Object.keys(request.state)[0];</td>
                           
-                        </tr>            <tr id="lib/index.js__288" class="miss">
+                        </tr>            <tr id="lib/index.js__288" class="hit">
                           <td class="line" data-tooltip>288</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        const entry &#x3D; formatEvent(event);</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        const entry &#x3D; formatEvent(event);</td>
                           
                         </tr>            <tr id="lib/index.js__289" class="hit">
                           <td class="line" data-tooltip>289</td>
@@ -2356,11 +2363,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // If Client or Server errors</td>
                           
-                        </tr>            <tr id="lib/index.js__291" class="miss">
+                        </tr>            <tr id="lib/index.js__291" class="chunks">
                           <td class="line" data-tooltip>291</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        if (code &gt;&#x3D; 400) {</td>
+                          <td class="source"><div>        if (</div><div class="miss false" data-tooltip>code &gt;&#x3D; 400</div><div>) {</div></td>
                           
                         </tr>            <tr id="lib/index.js__292" class="miss">
                           <td class="line" data-tooltip>292</td>
@@ -2392,11 +2399,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // Check if session is available</td>
                           
-                        </tr>            <tr id="lib/index.js__297" class="miss">
+                        </tr>            <tr id="lib/index.js__297" class="chunks">
                           <td class="line" data-tooltip>297</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        if (state &amp;&amp; request[state].id) {</td>
+                          <td class="source"><div>        if (</div><div class="miss false" data-tooltip>state</div><div> &amp;&amp; </div><div class="miss never" data-tooltip>request[state].id</div><div>) {</div></td>
                           
                         </tr>            <tr id="lib/index.js__298" class="miss">
                           <td class="line" data-tooltip>298</td>
@@ -2422,17 +2429,17 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // If request tag is not presetn, add it</td>
                           
-                        </tr>            <tr id="lib/index.js__302" class="miss">
+                        </tr>            <tr id="lib/index.js__302" class="chunks">
                           <td class="line" data-tooltip>302</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        if (entry.tags.indexOf(&#x27;request&#x27;) &#x3D;&#x3D;&#x3D; -1) {</td>
+                          <td class="source"><div>        if (</div><div class="miss true" data-tooltip>entry.tags.indexOf(&#x27;request&#x27;) &#x3D;&#x3D;&#x3D; -1</div><div>) {</div></td>
                           
-                        </tr>            <tr id="lib/index.js__303" class="miss">
+                        </tr>            <tr id="lib/index.js__303" class="hit">
                           <td class="line" data-tooltip>303</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>            entry.tags &#x3D; [&#x27;request&#x27;, request.route.path, ...entry.tags];</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">            entry.tags &#x3D; [&#x27;request&#x27;, request.route.path, ...entry.tags];</td>
                           
                         </tr>            <tr id="lib/index.js__304" class="hit">
                           <td class="line" data-tooltip>304</td>
@@ -2452,11 +2459,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source">        // If no data, dont send anything</td>
                           
-                        </tr>            <tr id="lib/index.js__307" class="miss">
+                        </tr>            <tr id="lib/index.js__307" class="chunks">
                           <td class="line" data-tooltip>307</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        if (!Object.keys(entry.data).length) {</td>
+                          <td class="source"><div>        if (</div><div class="miss false" data-tooltip>!Object.keys(entry.data).length</div><div>) {</div></td>
                           
                         </tr>            <tr id="lib/index.js__308" class="miss">
                           <td class="line" data-tooltip>308</td>
@@ -2476,11 +2483,11 @@
                           <td class="hits" data-tooltip></td>
                           <td class="source"></td>
                           
-                        </tr>            <tr id="lib/index.js__311" class="miss">
+                        </tr>            <tr id="lib/index.js__311" class="hit">
                           <td class="line" data-tooltip>311</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>        return write({ entry, request });</td>
+                          <td class="hits" data-tooltip>1</td>
+                          <td class="source">        return write({ entry, request });</td>
                           
                         </tr>            <tr id="lib/index.js__312" class="hit">
                           <td class="line" data-tooltip>312</td>
@@ -2491,7 +2498,7 @@
                         </tr>            <tr id="lib/index.js__313" class="hit">
                           <td class="line" data-tooltip>313</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
+                          <td class="hits" data-tooltip>2</td>
                           <td class="source">    server.on(&#x27;request-error&#x27;, (request, err) &#x3D;&gt; {</td>
                           
                         </tr>            <tr id="lib/index.js__314" class="hit">
@@ -2599,7 +2606,7 @@
                         </tr>            <tr id="lib/index.js__331" class="hit">
                           <td class="line" data-tooltip>331</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>2</td>
+                          <td class="hits" data-tooltip>3</td>
                           <td class="source">    if (opts.error !&#x3D;&#x3D; null) {</td>
                           
                         </tr>            <tr id="lib/index.js__332" class="hit">
@@ -2623,56 +2630,56 @@
                         </tr>            <tr id="lib/index.js__335" class="hit">
                           <td class="line" data-tooltip>335</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">    plugin.register(Scooter, err &#x3D;&gt; {</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    // Settings to be available in internals</td>
                           
                         </tr>            <tr id="lib/index.js__336" class="hit">
                           <td class="line" data-tooltip>336</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    const { signals, exceptions } &#x3D; internals.settings &#x3D; opts.value;</td>
                           
-                        </tr>            <tr id="lib/index.js__337" class="chunks">
+                        </tr>            <tr id="lib/index.js__337" class="hit">
                           <td class="line" data-tooltip>337</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"><div>        if (</div><div class="miss false" data-tooltip>err</div><div>) {</div></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    const server &#x3D; plugin.root;</td>
                           
-                        </tr>            <tr id="lib/index.js__338" class="miss">
+                        </tr>            <tr id="lib/index.js__338" class="hit">
                           <td class="line" data-tooltip>338</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source" data-tooltip>            return next(err.message);</td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="lib/index.js__339" class="hit">
                           <td class="line" data-tooltip>339</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">        }</td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="lib/index.js__340" class="hit">
                           <td class="line" data-tooltip>340</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="source">    // Should we handle process signals?</td>
                           
-                        </tr>            <tr id="lib/index.js__341" class="hit">
+                        </tr>            <tr id="lib/index.js__341" class="chunks">
                           <td class="line" data-tooltip>341</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">        // Settings to be available in internals</td>
+                          <td class="source"><div>    if (</div><div class="miss true" data-tooltip>signals</div><div>) {</div></td>
                           
                         </tr>            <tr id="lib/index.js__342" class="hit">
                           <td class="line" data-tooltip>342</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">        const { signals, exceptions } &#x3D; internals.settings &#x3D; opts.value;</td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">        internals.signals(server);</td>
                           
                         </tr>            <tr id="lib/index.js__343" class="hit">
                           <td class="line" data-tooltip>343</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">        const server &#x3D; plugin.root;</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    }</td>
                           
                         </tr>            <tr id="lib/index.js__344" class="hit">
                           <td class="line" data-tooltip>344</td>
@@ -2684,166 +2691,112 @@
                           <td class="line" data-tooltip>345</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="source">    // Should we handle exceptions?</td>
                           
-                        </tr>            <tr id="lib/index.js__346" class="hit">
+                        </tr>            <tr id="lib/index.js__346" class="chunks">
                           <td class="line" data-tooltip>346</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">        // Should we handle process signals?</td>
+                          <td class="source"><div>    if (</div><div class="miss true" data-tooltip>exceptions</div><div>) {</div></td>
                           
-                        </tr>            <tr id="lib/index.js__347" class="chunks">
+                        </tr>            <tr id="lib/index.js__347" class="hit">
                           <td class="line" data-tooltip>347</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"><div>        if (</div><div class="miss true" data-tooltip>signals</div><div>) {</div></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">        internals.exceptions(server);</td>
                           
                         </tr>            <tr id="lib/index.js__348" class="hit">
                           <td class="line" data-tooltip>348</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">            internals.signals(server);</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    }</td>
                           
                         </tr>            <tr id="lib/index.js__349" class="hit">
                           <td class="line" data-tooltip>349</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">        }</td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="lib/index.js__350" class="hit">
                           <td class="line" data-tooltip>350</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="source">    // Handle server events</td>
                           
                         </tr>            <tr id="lib/index.js__351" class="hit">
                           <td class="line" data-tooltip>351</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source">        // Should we handle exceptions?</td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    internals.events(server);</td>
                           
-                        </tr>            <tr id="lib/index.js__352" class="chunks">
+                        </tr>            <tr id="lib/index.js__352" class="hit">
                           <td class="line" data-tooltip>352</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source"><div>        if (</div><div class="miss true" data-tooltip>exceptions</div><div>) {</div></td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="lib/index.js__353" class="hit">
                           <td class="line" data-tooltip>353</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">            internals.exceptions(server);</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    // Exposing methods</td>
                           
                         </tr>            <tr id="lib/index.js__354" class="hit">
                           <td class="line" data-tooltip>354</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source">        }</td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    plugin.expose(&#x27;write&#x27;, internals.write);</td>
                           
                         </tr>            <tr id="lib/index.js__355" class="hit">
                           <td class="line" data-tooltip>355</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    plugin.expose(&#x27;console&#x27;, internals.console);</td>
                           
                         </tr>            <tr id="lib/index.js__356" class="hit">
                           <td class="line" data-tooltip>356</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">        // Handle server events</td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="lib/index.js__357" class="hit">
                           <td class="line" data-tooltip>357</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">        internals.events(server);</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">    // Move along</td>
                           
                         </tr>            <tr id="lib/index.js__358" class="hit">
                           <td class="line" data-tooltip>358</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
+                          <td class="hits" data-tooltip>2</td>
+                          <td class="source">    return next();</td>
                           
                         </tr>            <tr id="lib/index.js__359" class="hit">
                           <td class="line" data-tooltip>359</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
-                          <td class="source">        // Exposing methods</td>
+                          <td class="source">};</td>
                           
                         </tr>            <tr id="lib/index.js__360" class="hit">
                           <td class="line" data-tooltip>360</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">        plugin.expose(&#x27;write&#x27;, internals.write);</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source"></td>
                           
                         </tr>            <tr id="lib/index.js__361" class="hit">
                           <td class="line" data-tooltip>361</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">        plugin.expose(&#x27;console&#x27;, internals.console);</td>
+                          <td class="hits" data-tooltip></td>
+                          <td class="source">// Exposing Plugin Attributes &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
                           
                         </tr>            <tr id="lib/index.js__362" class="hit">
                           <td class="line" data-tooltip>362</td>
                           <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
-                          
-                        </tr>            <tr id="lib/index.js__363" class="hit">
-                          <td class="line" data-tooltip>363</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">        return true;</td>
-                          
-                        </tr>            <tr id="lib/index.js__364" class="hit">
-                          <td class="line" data-tooltip>364</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source">    });</td>
-                          
-                        </tr>            <tr id="lib/index.js__365" class="hit">
-                          <td class="line" data-tooltip>365</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
-                          
-                        </tr>            <tr id="lib/index.js__366" class="hit">
-                          <td class="line" data-tooltip>366</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source">    // Move along</td>
-                          
-                        </tr>            <tr id="lib/index.js__367" class="hit">
-                          <td class="line" data-tooltip>367</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip>1</td>
-                          <td class="source">    return next();</td>
-                          
-                        </tr>            <tr id="lib/index.js__368" class="hit">
-                          <td class="line" data-tooltip>368</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source">};</td>
-                          
-                        </tr>            <tr id="lib/index.js__369" class="hit">
-                          <td class="line" data-tooltip>369</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source"></td>
-                          
-                        </tr>            <tr id="lib/index.js__370" class="hit">
-                          <td class="line" data-tooltip>370</td>
-                          <td class="lint empty"></td>
-                          <td class="hits" data-tooltip></td>
-                          <td class="source">// Exposing Plugin Attributes &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
-                          
-                        </tr>            <tr id="lib/index.js__371" class="hit">
-                          <td class="line" data-tooltip>371</td>
-                          <td class="lint empty"></td>
                           <td class="hits" data-tooltip>1</td>
                           <td class="source">exports.register.attributes &#x3D; { pkg };</td>
                           
-                        </tr>            <tr id="lib/index.js__372" class="hit">
-                          <td class="line" data-tooltip>372</td>
+                        </tr>            <tr id="lib/index.js__363" class="hit">
+                          <td class="line" data-tooltip>363</td>
                           <td class="lint empty"></td>
                           <td class="hits" data-tooltip></td>
                           <td class="source"></td>
