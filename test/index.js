@@ -3,32 +3,89 @@ const Lab = require('lab');
 const Code = require('code');
 const Hapi = require('hapi');
 const Path = require('path');
+const fsExtra = require('fs-extra');
+// const fs = require('fs');
+const Madero = require('../');
 
 // Internals ====================================
-const internals = {};
+const internals = {
+    options: {
+        path: './logs',
+        silent: true
+    },
+    path: Path.resolve(__dirname, '../')
+};
 
 // Shortcuts ====================================
 const lab = exports.lab = Lab.script();
-const { describe, it, before, after } = lab;
+const { describe, it, after } = lab;
 const expect = Code.expect;
 
 // Main Experiment ==============================
-describe('Server', () => {
+describe('Madero', () => {
 
-    let server;
+    it('wrong options (needs `path` to save logs)', done => {
+
+        const server = new Hapi.Server({ debug: false });
+
+        server.connection();
+        server.register({ register: Madero, options: { } }, err => {
+
+            expect(err).to.exist();
+            done();
+        });
+    });
 
     it('logs event', done => {
-        
-        server = new Hapi.Server({ debug: false });
+
+        const server = new Hapi.Server({ debug: false });
+
         server.connection();
+        server.register({ register: Madero, options: internals.options }, (err) => {
 
+            expect(err).to.not.exist();
 
+            server.route({
+                method: 'GET',
+                path: '/log-test',
+                handler: (request, reply) => {
+
+                    request.log(['test'], { message: 'test', foo: 'bar' });
+
+                    return reply('ok');
+                }
+            });
+
+            server.start(err => {
+
+                expect(err).to.not.exist();
+
+                server.log(['info', 'app', 'start'], { message: 'test' });
+
+                setTimeout(() => {
+
+                    fsExtra.pathExists(`${internals.path}/logs/info.log`, (err, exists) => {
+
+                        expect(err).to.not.exist();
+                        expect(exists).to.equal(true);
+                        done();
+                    });
+                }, 200);
+            });
+        });
     });
-    it('logs request error event');
-    it('logs request event');
-    it('logs error event');
-    it('logs signal (SIGTERM)');
-    it('logs signal (SIGINT)');
-    it('logs uncaughtException event');
-    it('logs unhandledRejection event');
+    // it('logs request error event');
+    // it('logs request event');
+    // it('logs error event');
+    // it('logs signal (SIGTERM)');
+    // it('logs signal (SIGINT)');
+    // it('logs uncaughtException event');
+    // it('logs unhandledRejection event');
+
+    after(done => {
+
+        // Clean logs
+        fsExtra.removeSync(`${internals.path}/logs`);
+        done();
+    });
 });
