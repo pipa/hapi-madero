@@ -122,7 +122,7 @@
      * Style
      */
     "no-mixed-spaces-and-tabs": 2,   // http://eslint.org/docs/rules/no-mixed-spaces-and-tabs
-    "strict": [2, "function"],       // http://eslint.org/docs/rules/strict
+    "strict": [2, "never"],       // http://eslint.org/docs/rules/strict
     "prefer-arrow-callback": 2,      // http://eslint.org/docs/rules/prefer-arrow-callback
     "consistent-this": [2,           // http://eslint.org/docs/rules/consistent-this
       "self",
