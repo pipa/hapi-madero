@@ -5,7 +5,8 @@
   "description": "A HapiJS plugin for writing logs to files",
   "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -L -r html -o test/coverage.html -m 5000"
+    "test": "./node_modules/lab/bin/lab -L -m 5000",
+    "testHTML": "./node_modules/lab/bin/lab -L -r html -o test/coverage.html -m 5000"
   },
   "repository": {
     "type": "git",
