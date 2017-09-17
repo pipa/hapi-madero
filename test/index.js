@@ -4,7 +4,7 @@ const Code = require('code');
 const Hapi = require('hapi');
 const Path = require('path');
 const fsExtra = require('fs-extra');
-// const fs = require('fs');
+const Boom = require('boom');
 const Madero = require('../');
 
 // Internals ====================================
@@ -23,18 +23,6 @@ const expect = Code.expect;
 
 // Main Experiment ==============================
 describe('Madero', () => {
-
-    it('wrong options (needs `path` to save logs)', done => {
-
-        const server = new Hapi.Server({ debug: false });
-
-        server.connection();
-        server.register({ register: Madero, options: { } }, err => {
-
-            expect(err).to.exist();
-            done();
-        });
-    });
 
     it('logs event', done => {
 
@@ -62,7 +50,46 @@ describe('Madero', () => {
             });
         });
     });
-    // it('logs request error event');
+    it('logs request error event', done => {
+
+        const server = new Hapi.Server({ debug: false });
+
+        server.connection();
+        server.register({ register: Madero, options: internals.options }, (err) => {
+
+            expect(err).to.not.exist();
+            server.route({
+                method: 'GET',
+                path: '/log-error',
+                handler: (request, reply) => {
+
+                    return reply(Boom.badImplementation('Test error', new Error('test')));
+                }
+            });
+            server.start(err => {
+
+                const options = {
+                    method: 'GET',
+                    url: '/log-error'
+                };
+
+                expect(err).to.not.exist();
+
+                server.inject(options, () => {
+
+                    setTimeout(() => {
+
+                        fsExtra.pathExists(`${internals.path}/logs/error.log`, (err, exists) => {
+
+                            expect(err).to.not.exist();
+                            expect(exists).to.equal(true);
+                            done();
+                        });
+                    }, 200);
+                });
+            });
+        });
+    });
     it('logs request event', done => {
 
         const server = new Hapi.Server({ debug: false });

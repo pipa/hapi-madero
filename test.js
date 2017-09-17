@@ -1,5 +1,14 @@
 const Hapi = require('hapi');
+const Boom = require('boom');
 const Madero = require('./');
+
+const internals = {
+    settings: {
+        path: './logs',
+        timestampKey: '@timestamp',
+        unixStamp: false
+    }
+};
 
 const server = new Hapi.Server({ debug: false });
 
@@ -7,7 +16,7 @@ server.connection({
     host: 'localhost',
     port: 1112
 });
-server.register({ register: Madero, options: { path: './logs' } }, err => {
+server.register({ register: Madero, options: internals.settings }, err => {
 
     if (err) {
         throw err;
@@ -21,6 +30,15 @@ server.register({ register: Madero, options: { path: './logs' } }, err => {
             request.log(['test'], { message: 'test', foo: 'bar' });
 
             return reply('ok');
+        }
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/log-error',
+        handler: (request, reply) => {
+
+            return reply(Boom.badImplementation('Test error', new Error('test')));
         }
     });
 

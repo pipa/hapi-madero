@@ -26,20 +26,21 @@
     "node": ">=7.x.x"
   },
   "dependencies": {
-    "chalk": "2.0.1",
+    "boom": "^5.2.0",
+    "chalk": "2.1.0",
     "fast-safe-stringify": "1.2.0",
-    "fs-extra": "3.0.1",
-    "hoek": "4.1.1",
-    "joi": "10.6.0",
+    "fs-extra": "4.0.2",
+    "hoek": "4.2.0",
+    "joi": "11.0.1",
     "prettyjson": "1.2.1",
     "useragent": "2.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "7.2.3",
-    "code": "4.1.0",
-    "eslint": "4.2.0",
-    "hapi": "16.4.3",
-    "lab": "14.1.1"
+    "babel-eslint": "8.0.0",
+    "code": "5.0.0",
+    "eslint": "4.7.0",
+    "hapi": "16.6.0",
+    "lab": "14.3.0"
   },
   "license": "MIT"
 }

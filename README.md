@@ -69,8 +69,8 @@ server.register({ register: Madero, options: maderoOptions }, err => {
 
 ## Plugin Options
 
-#### `path` - required - String
-Madero needs to know where to save the files, this will tell madero where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'.
+#### `path` - String
+Madero needs to know where to save the files, this will tell madero where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'. Defaults to `./_logs`
 
 #### `stopTimeoutMsec` - Number
 Overrides the timeout in millisecond before forcefully terminating a connection. Defaults to `15000` (15 seconds)
@@ -83,6 +83,12 @@ Whether you want madero to handle `SIGTERM` or `SIGINT`. Defaults to `true`
 
 #### `exceptions` - Boolean
 Whether you want madero to handle `uncaughtException` or `unhandledRejection`. Defaults to `true`
+
+#### `timestampKey` - String
+In case you need to specify the timestamp key for the events, you can change it here. Defaults to `timestamp`
+
+#### `unixStamp` - Boolean
+By default, each event timestamp is set to a unix stamp of 13 numbers, changing this to false will change it to a ISO string: `YYYY-MM-DDTHH:mm:ss.sssZ`
 
 ## Plugin Methods
 
