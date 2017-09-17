@@ -1,6 +1,6 @@
 {
   "name": "hapi-madero",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Luis Matute <luis.matute@me.com> (http://luismatute.me/)",
   "description": "A HapiJS plugin for writing logs to files",
   "main": "lib/index.js",
