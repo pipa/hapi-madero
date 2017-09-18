@@ -28,6 +28,7 @@ server.register({ register: Madero, options: internals.settings }, err => {
         handler: (request, reply) => {
 
             request.log(['test'], { message: 'test', foo: 'bar' });
+            // request.log(['test'], 'this is a test');
 
             return reply('ok');
         }
