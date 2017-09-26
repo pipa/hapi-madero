@@ -93,7 +93,7 @@ server.register({ register: Madero, options: maderoOptions }, err => {
 ## Plugin Options
 
 #### `path` - String
-Madero needs to know where to save the files, this will tell madero where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'. Defaults to `./logs`
+Madero needs to know where to save the files, this will tell madero where the log files will be saved. I.E.: `./logs` will create a directory in the project root called 'logs'. Defaults to `path.resolve(path.dirname(require.main.filename), './logs')` (which will create the directory where the main file is run)
 
 #### `stopTimeoutMsec` - Number
 Overrides the timeout in millisecond before forcefully terminating a connection. Defaults to `15000` (15 seconds)
